@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken")
 const User = require("../models/User")
+require("dotenv").config()
 
 // Protect routes
 exports.protect = async (req, res, next) => {
@@ -20,7 +21,7 @@ exports.protect = async (req, res, next) => {
 
   try {
     // Verify token
-    const decoded = jwt.verify(token, "krim1naldair135b10gsit3")
+    const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
     req.user = await User.findById(decoded.id)
     next()

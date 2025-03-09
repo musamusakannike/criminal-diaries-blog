@@ -17,7 +17,7 @@ const User = require("./models/User")
 
 // Initialize express app
 const app = express()
-const PORT = 5500
+const PORT = process.env.PORT || 6000;
 
 // Middleware
 app.use(express.json())
@@ -28,7 +28,7 @@ app.use(morgan("dev"))
 // Connect to MongoDB
 mongoose
   .connect(
-    "mongodb+srv://musamusakannike:TNxKmLacEbOFRiVq@cluster0.rccvl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    process.env.MONGO_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
