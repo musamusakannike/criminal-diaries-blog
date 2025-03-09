@@ -34,7 +34,7 @@ export default function LandingPage() {
 
   useEffect(() => {
     // Add dark class to body
-    document.body.classList.add("dark");
+    // document.body.classList.add("dark");
 
     const handleScroll = () => {
       setScrollPosition(window.scrollY);

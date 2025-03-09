@@ -78,9 +78,6 @@ export default function StoriesPage() {
       return;
     }
 
-    // Add dark class to body
-    document.body.classList.add("dark");
-
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
     };

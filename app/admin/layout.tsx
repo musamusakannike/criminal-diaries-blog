@@ -1,32 +1,38 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { BookOpen, LayoutDashboard, FileText, Users, MessageSquare, BarChart, Settings, LogOut } from "lucide-react"
-import { useAuth } from "@/auth-context"
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  BookOpen,
+  LayoutDashboard,
+  FileText,
+  Users,
+  MessageSquare,
+  BarChart,
+  Settings,
+  LogOut,
+} from "lucide-react";
+import { useAuth } from "@/auth-context";
 
 export default function AdminLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const { user, isAdmin, loading, logout } = useAuth()
-  const router = useRouter()
+  const { user, isAdmin, loading, logout } = useAuth();
+  const router = useRouter();
 
   useEffect(() => {
     // Redirect if not admin
     if (!loading && (!user || !isAdmin)) {
-      router.push("/login")
+      router.push("/login");
     }
-
-    // Add dark class to body
-    document.body.classList.add("dark")
-  }, [user, isAdmin, loading, router])
+  }, [user, isAdmin, loading, router]);
 
   if (loading) {
     return (
@@ -36,11 +42,11 @@ export default function AdminLayout({
           <h2 className="mt-4 text-xl">Loading...</h2>
         </div>
       </div>
-    )
+    );
   }
 
   if (!user || !isAdmin) {
-    return null // Will redirect in useEffect
+    return null; // Will redirect in useEffect
   }
 
   return (
@@ -55,7 +61,9 @@ export default function AdminLayout({
         <div className="p-6">
           <Link href="/" className="flex items-center space-x-2">
             <BookOpen className="h-8 w-8 text-red-500" />
-            <span className="text-xl font-bold tracking-tighter">Criminal Diaries</span>
+            <span className="text-xl font-bold tracking-tighter">
+              Criminal Diaries
+            </span>
           </Link>
         </div>
 
@@ -63,7 +71,9 @@ export default function AdminLayout({
           <div className="flex items-center space-x-3 mb-6 bg-gray-800/50 p-3 rounded-lg">
             <div className="relative h-10 w-10 rounded-full overflow-hidden">
               <Image
-                src={user.profilePicture || "/placeholder.svg?height=40&width=40"}
+                src={
+                  user.profilePicture || "/placeholder.svg?height=40&width=40"
+                }
                 alt={user.username}
                 fill
                 className="object-cover"
@@ -135,6 +145,5 @@ export default function AdminLayout({
       {/* Main content */}
       <div className="ml-64 w-full">{children}</div>
     </div>
-  )
+  );
 }
-
