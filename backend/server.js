@@ -43,11 +43,11 @@ mongoose
 
       if (!adminExists) {
         const salt = await bcrypt.genSalt(10)
-        const hashedPassword = "admin123"
+        const hashedPassword = process.env.ADMIN_PASSWORD
 
         await User.create({
-          username: "admin",
-          email: "admin@criminaldiaries.com",
+          username: process.env.ADMIN_USERNAME,
+          email: process.env.ADMIN_EMAIL,
           password: hashedPassword,
           role: "admin",
         })

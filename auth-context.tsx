@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchCurrentUser = async (token: string) => {
     try {
-      const response = await fetch("http://localhost:5500/api/auth/me", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/auth/me", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setError(null)
 
     try {
-      const response = await fetch("http://localhost:5500/api/auth/login", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -116,7 +116,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setError(null)
 
     try {
-      const response = await fetch("http://localhost:5500/api/auth/signup", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

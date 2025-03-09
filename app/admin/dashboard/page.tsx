@@ -42,7 +42,7 @@ export default function AdminDashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await fetch("http://localhost:5500/api/admin/stats", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/admin/stats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

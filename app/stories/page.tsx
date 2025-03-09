@@ -92,7 +92,7 @@ export default function StoriesPage() {
 
   const fetchStories = async () => {
     try {
-      const response = await fetch("http://localhost:5500/api/stories", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/stories", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -115,7 +115,7 @@ export default function StoriesPage() {
   const fetchStoryDetails = async (storyId: string) => {
     try {
       const response = await fetch(
-        `http://localhost:5500/api/stories/${storyId}`,
+        `https://criminal-diaries-blog.onrender.com/api/stories/${storyId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -139,7 +139,7 @@ export default function StoriesPage() {
 
     try {
       const response = await fetch(
-        `http://localhost:5500/api/stories/${storyId}/like`,
+        `https://criminal-diaries-blog.onrender.com/api/stories/${storyId}/like`,
         {
           method: "PUT",
           headers: {
@@ -170,7 +170,7 @@ export default function StoriesPage() {
     if (!token || !selectedStory || !commentText.trim()) return;
 
     try {
-      const response = await fetch("http://localhost:5500/api/comments", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

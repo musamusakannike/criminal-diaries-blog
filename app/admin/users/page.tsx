@@ -49,7 +49,7 @@ export default function AdminUsers() {
   const fetchUsers = async () => {
     try {
       setLoading(true)
-      const response = await fetch("http://localhost:5500/api/admin/users", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/admin/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -75,7 +75,7 @@ export default function AdminUsers() {
     try {
       setError(null)
 
-      const response = await fetch(`http://localhost:5500/api/admin/users/${currentUser._id}`, {
+      const response = await fetch(`https://criminal-diaries-blog.onrender.com/api/admin/users/${currentUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ export default function AdminUsers() {
     try {
       setError(null)
 
-      const response = await fetch(`http://localhost:5500/api/admin/users/${currentUser._id}`, {
+      const response = await fetch(`https://criminal-diaries-blog.onrender.com/api/admin/users/${currentUser._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

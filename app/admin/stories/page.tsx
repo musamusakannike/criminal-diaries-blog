@@ -81,7 +81,7 @@ export default function AdminStories() {
   const fetchStories = async () => {
     try {
       setLoading(true)
-      const response = await fetch("http://localhost:5500/api/admin/stories", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/admin/stories", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -105,7 +105,7 @@ export default function AdminStories() {
     try {
       setError(null)
 
-      const response = await fetch("http://localhost:5500/api/stories", {
+      const response = await fetch("https://criminal-diaries-blog.onrender.com/api/stories", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -141,7 +141,7 @@ export default function AdminStories() {
     try {
       setError(null)
 
-      const response = await fetch(`http://localhost:5500/api/stories/${currentStory._id}`, {
+      const response = await fetch(`https://criminal-diaries-blog.onrender.com/api/stories/${currentStory._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -177,7 +177,7 @@ export default function AdminStories() {
     try {
       setError(null)
 
-      const response = await fetch(`http://localhost:5500/api/admin/stories/${currentStory._id}`, {
+      const response = await fetch(`https://criminal-diaries-blog.onrender.com/api/admin/stories/${currentStory._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
