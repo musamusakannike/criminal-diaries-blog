@@ -79,6 +79,7 @@ router.post("/", protect, async (req, res) => {
       data: story,
     })
   } catch (error) {
+    console.log(error)
     res.status(500).json({
       success: false,
       message: error.message,
