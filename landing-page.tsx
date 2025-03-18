@@ -208,7 +208,7 @@ export default function LandingPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/50 to-gray-900"></div>
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/crimescenebg.png?height=1080&width=1920"
             alt="Crime scene background"
             fill
             className="object-cover opacity-20"
@@ -722,7 +722,8 @@ const featuredStories = [
     title: "The Zodiac Killer: America's Most Elusive Serial Killer",
     excerpt:
       "Explore the unsolved mystery of the Zodiac Killer who terrorized Northern California in the late 1960s.",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://i.ibb.co/4nDMt7TT/Musa-Musa-Kannike-A-dark-foggy-San-Francisco-street-at-night-illum-336984f5-226a-4eda-869d-9e85cd112.png",
     category: "Serial Killers",
     readTime: "8 min read",
     author: "Jane Doe",
@@ -731,7 +732,8 @@ const featuredStories = [
     title: "The Gardner Museum Heist: $500 Million in Stolen Art",
     excerpt:
       "The story of the largest art theft in history that remains unsolved to this day.",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://i.ibb.co/7xKQSCCx/Musa-Musa-Kannike-A-dimly-lit-gallery-room-in-the-Isabella-Stewart-G-54ed4d8b-8e1b-4ae0-a182-3c0a2f2.png",
     category: "Heists",
     readTime: "6 min read",
     author: "John Smith",
@@ -740,7 +742,8 @@ const featuredStories = [
     title: "The Black Dahlia Murder: Hollywood's Darkest Mystery",
     excerpt:
       "The brutal murder of Elizabeth Short that shocked America and remains unsolved.",
-    image: "/placeholder.svg?height=400&width=600",
+    image:
+      "https://i.ibb.co/LDqWzbzj/Musa-Musa-Kannike-A-shadowy-street-in-1940s-Los-Angeles-dimly-lit-b-e9f3ba4f-42ad-4bbb-a85d-0461895d.png",
     category: "Cold Cases",
     readTime: "10 min read",
     author: "Mark Johnson",
@@ -751,12 +754,13 @@ const categories = [
   {
     name: "Serial Killers",
     count: 24,
-    image: "/placeholder.svg?height=300&width=400",
+    image:
+      "https://i.ibb.co/3YYTXLdN/Musa-Musa-Kannike-A-dimly-lit-crime-scene-with-police-tape-in-the-fo-c6e54a23-2a64-4e9b-bac5-4c6dacc.png",
   },
   {
     name: "Cold Cases",
     count: 18,
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://i.ibb.co/tw0kPsmN/Musa-Musa-Kannike-A-dusty-detective-s-desk-covered-in-old-case-files-893fcf5f-e39b-4993-a932-21bfbce.png",
   },
   {
     name: "Heists",
